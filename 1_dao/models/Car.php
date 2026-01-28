@@ -30,7 +30,7 @@
         }
 
         public function setKm($km) {
-            $this->km = $km;
+            $this->km = intVal($km);
         }
 
         public function getColor() {
@@ -43,7 +43,7 @@
 
     }
 
-    interface CarDAO {
+    interface CarDAOInterface {
 
         public function create(Car $car);
         public function findALL();
